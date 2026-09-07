@@ -1,24 +1,30 @@
-# Pydantic
-
 ### 1. 기본: 데이터 검증과 타입 변환
 
 핵심 개념
 
-* BaseModel: Pydantic 모델의 기본 클래스
-* 타입 힌트: 데이터의 형태를 정의
-* 자동 타입 변환
-* 잘못된 데이터에 대한 ValidationError
+- BaseModel: Pydantic 모델의 기본 클래스
+- 타입 힌트로 데이터 타입 정의
+- 문자열 `"25"`를 정수 `25`로 자동 변환
+- 변환할 수 없는 데이터는 ValidationError 발생
 
 
 ### 2. 실전: 기본값, Optional, 중첩 모델
 
 핵심 개념
 
-Field()
-| None
-기본값
-Nested Model
-복잡한 JSON 데이터 검증
+- Field(): 값의 범위와 조건 설정
+- `str | None`: 값이 없어도 되는 Optional 필드
+- 기본값 설정
+- Nested Model: 모델 안에 다른 모델 사용
+- Dictionary 형태의 중첩 데이터를 모델 객체로 변환
 
 
 ### 3. API 요청 → 검증 → 데이터 변환
+
+핵심 개념
+
+- API 요청 데이터 형식 정의
+- `Field()`로 문자열 길이, 숫자 범위 검증
+- 조건을 만족한 데이터만 처리
+- 검증된 데이터를 함수에 전달
+- 잘못된 요청 데이터는 ValidationError 발생
