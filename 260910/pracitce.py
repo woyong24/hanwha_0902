@@ -94,3 +94,5 @@ for eq in equipment:
         print(eq, recipe)
 
 # 여기까지하고 점심 이후로 조퇴해서 내용을 모른다..................
+
+# Streealit-FastAPI 연결해서 뭐시기 공부 10일(목) 내용 정리하기
